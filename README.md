@@ -1,30 +1,20 @@
 # dotfiles
 
-A curated collection of my personal development environment.
+My personal development environment for macOS.
 
-The goal of this repository is simple: clone it onto a fresh macOS machine, run a single installation script, and have a complete, reproducible development environment.
-
----
-
-# Philosophy
-
-* Keep things simple.
-* Prefer native tooling and sensible defaults.
-* Automate repetitive setup.
-* Avoid unnecessary abstractions.
-* Version control configuration, not secrets.
-* Build an environment that is easy to understand and maintain.
+This repository contains the tools, configuration, and bootstrap process I use every day. Everything is version controlled so I can recreate a consistent development environment on a fresh machine with minimal setup.
 
 ---
 
-# Included
+# Features
 
-* Fish shell configuration
-* Git configuration
-* Neovim configuration
-* Zellij configuration
-* Homebrew package definitions
-* Bootstrap scripts
+* 🐟 Fish shell
+* ✨ Starship prompt
+* 📝 Neovim
+* 🪟 Zellij
+* 🍺 Homebrew package management
+* ⚡ Modern CLI tooling
+* 🚀 One-command bootstrap
 
 ---
 
@@ -43,13 +33,6 @@ Run the installer:
 ./install.sh
 ```
 
-The installer will:
-
-* Install Homebrew (if necessary)
-* Install packages from the `Brewfile`
-* Link configuration files
-* Prepare the development environment
-
 ---
 
 # Repository Structure
@@ -57,19 +40,18 @@ The installer will:
 ```text
 .
 ├── Brewfile
+├── LICENSE
 ├── README.md
 ├── install.sh
 ├── fish/
 ├── git/
 ├── nvim/
-├── zellij/
-├── ghostty/
-└── scripts/
+└── zellij/
 ```
 
 ---
 
-# Core Tooling
+# Included Tooling
 
 ## Shell
 
@@ -81,6 +63,7 @@ The installer will:
 
 * Neovim
 * Tree-sitter
+* Lazy.nvim
 * Lua Language Server
 
 ## Development
@@ -93,14 +76,10 @@ The installer will:
 * Python
 * Docker
 
-## Terminal
-
-* Ghostty
-* Zellij
-
 ## CLI Utilities
 
 * bat
+* btop
 * eza
 * fd
 * fzf
@@ -112,9 +91,23 @@ The installer will:
 
 ---
 
-# Why?
+# Philosophy
 
-I regularly set up new machines and experiment with different workflows. This repository is the single source of truth for my development environment. Instead of documenting every tool manually, I automate the setup process so a new machine can be ready in minutes.
+This repository favors simplicity over complexity.
+
+Rather than relying on large configuration frameworks, each tool is configured with a minimal, maintainable setup that can be understood and modified without unnecessary abstraction.
+
+The goal isn't to create the most customized environment possible—it's to create one that's fast, reproducible, and enjoyable to work in.
+
+---
+
+# Roadmap
+
+* [ ] Automatic symlink management
+* [ ] Ghostty configuration
+* [ ] Starship configuration
+* [ ] Improved bootstrap process
+* [ ] Linux support
 
 ---
 
