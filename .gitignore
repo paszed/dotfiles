@@ -1,0 +1,23 @@
+# macOS
+
+.DS_Store
+
+# Vim / Neovim
+
+*.swp
+*.swo
+
+# Fish
+
+fish/fish_variables
+
+# Local overrides
+
+local.*
+.env
+.env.*
+
+# Logs
+
+*.log
+
