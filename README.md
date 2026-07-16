@@ -1,20 +1,19 @@
 # dotfiles
 
-My personal development environment for macOS.
+A curated collection of my personal development environment for macOS.
 
-This repository contains the tools, configuration, and bootstrap process I use every day. Everything is version controlled so I can recreate a consistent development environment on a fresh machine with minimal setup.
+This repository contains the configuration, tools, and bootstrap process I use every day. The goal is to make setting up a new machine fast, reproducible, and consistent.
 
 ---
 
 # Features
 
-* 🐟 Fish shell
-* ✨ Starship prompt
-* 📝 Neovim
-* 🪟 Zellij
+* 🐟 Fish shell configuration
+* 📝 Neovim configuration
+* 🪟 Zellij configuration
+* ⚙️ Git configuration
 * 🍺 Homebrew package management
-* ⚡ Modern CLI tooling
-* 🚀 One-command bootstrap
+* 🚀 Bootstrap installer
 
 ---
 
@@ -27,11 +26,17 @@ git clone https://github.com/paszed/dotfiles.git
 cd dotfiles
 ```
 
-Run the installer:
+Run the bootstrap script:
 
 ```bash
 ./install.sh
 ```
+
+The installer will:
+
+* Install Homebrew (if necessary)
+* Install packages from the `Brewfile`
+* Prepare the development environment
 
 ---
 
@@ -51,7 +56,7 @@ Run the installer:
 
 ---
 
-# Included Tooling
+# Tooling
 
 ## Shell
 
@@ -62,19 +67,23 @@ Run the installer:
 ## Editor
 
 * Neovim
-* Tree-sitter
 * Lazy.nvim
+* Tree-sitter
 * Lua Language Server
+
+## Languages
+
+* Go
+* Node.js
+* Python
+* Rust
 
 ## Development
 
 * Git
 * GitHub CLI
-* Go
-* Rust
-* Node.js
-* Python
 * Docker
+* Homebrew
 
 ## CLI Utilities
 
@@ -93,25 +102,30 @@ Run the installer:
 
 # Philosophy
 
-This repository favors simplicity over complexity.
+The goal of this repository is not to create the most customized setup possible, but a development environment that is:
 
-Rather than relying on large configuration frameworks, each tool is configured with a minimal, maintainable setup that can be understood and modified without unnecessary abstraction.
+* Simple
+* Reproducible
+* Maintainable
+* Fast
+* Easy to understand
 
-The goal isn't to create the most customized environment possible—it's to create one that's fast, reproducible, and enjoyable to work in.
+Configuration is kept intentionally small and organized so it can evolve without unnecessary complexity.
 
 ---
 
 # Roadmap
 
-* [ ] Automatic symlink management
+* [ ] Automatic configuration symlinking
 * [ ] Ghostty configuration
 * [ ] Starship configuration
-* [ ] Improved bootstrap process
+* [ ] macOS defaults script
 * [ ] Linux support
 
 ---
 
 # License
 
-MIT
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
+Edvard Pasz
