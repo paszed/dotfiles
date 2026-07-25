@@ -1,42 +1,114 @@
-# dotfiles
+~/dev on ☁️   took 2s
+❯ cat dotfiles/README.md
+# Dotfiles
 
-A curated collection of my personal development environment for macOS.
+> **A reproducible development environment built for consistency, automation, and developer experience.**
 
-This repository contains the configuration, tools, and bootstrap process I use every day. The goal is to make setting up a new machine fast, reproducible, and consistent.
+This repository contains the configuration, tooling, and bootstrap process that power my daily development workflow.
 
----
+Rather than treating a development environment as a collection of configuration files, this project approaches it as infrastructure. Every machine should provide the same tools, shell experience, editor configuration, and development workflow with minimal manual setup.
 
-# Features
+The objective is simple:
 
-* 🐟 Fish shell configuration
-* 📝 Neovim configuration
-* 🪟 Zellij configuration
-* ⚙️ Git configuration
-* 🍺 Homebrew package management
-* 🚀 Bootstrap installer
+> **A new machine should feel identical to the previous one.**
 
 ---
 
-# Installation
+# Why
 
-Clone the repository:
+Developer environments naturally drift over time.
 
-```bash
-git clone https://github.com/paszed/dotfiles.git
-cd dotfiles
+Packages are installed manually, shell configurations diverge, editor plugins become inconsistent, and setting up a new machine turns into an afternoon of remembering commands.
+
+Dotfiles eliminates that drift.
+
+A single repository defines the entire development environment, making onboarding, rebuilding, or replacing a machine predictable and repeatable.
+
+---
+
+# Philosophy
+
+The repository follows a simple principle:
+
+```text
+Machine
+      │
+      ▼
+Bootstrap
+      │
+      ▼
+Toolchain
+      │
+      ▼
+Configuration
+      │
+      ▼
+Consistent Development Experience
 ```
 
-Run the bootstrap script:
+Infrastructure should disappear into the background.
 
-```bash
-./install.sh
+Developers should think about software—not their environment.
+
+---
+
+# Design Principles
+
+## Reproducibility
+
+Every machine should produce the same development experience.
+
+---
+
+## Automation over documentation
+
+If a setup step can be automated, it should not become a README instruction.
+
+---
+
+## Simplicity
+
+Configuration should remain understandable months later.
+
+Small, explicit configuration is preferred over clever abstractions.
+
+---
+
+## Modularity
+
+Each tool owns its own configuration.
+
+No single file should become responsible for everything.
+
+---
+
+## Incremental evolution
+
+The environment should improve continuously without requiring large rewrites.
+
+---
+
+# Bootstrap Process
+
+The installation process performs the following steps:
+
+```text
+Clone Repository
+        │
+        ▼
+Install Homebrew
+        │
+        ▼
+Install Packages
+        │
+        ▼
+Configure Development Tools
+        │
+        ▼
+Ready to Develop
 ```
 
-The installer will:
-
-* Install Homebrew (if necessary)
-* Install packages from the `Brewfile`
-* Prepare the development environment
+A fresh machine becomes development-ready in only a few commands.
 
 ---
 
@@ -45,8 +117,6 @@ The installer will:
 ```text
 .
 ├── Brewfile
-├── LICENSE
-├── README.md
 ├── install.sh
 ├── fish/
 ├── git/
@@ -54,78 +124,91 @@ The installer will:
 └── zellij/
 ```
 
+Each directory represents one part of the development environment and can evolve independently.
+
 ---
 
-# Tooling
+# Toolchain
 
 ## Shell
 
-* Fish
-* Starship
-* Zoxide
+- Fish
+- Starship
+- Zoxide
 
 ## Editor
 
-* Neovim
-* Lazy.nvim
-* Tree-sitter
-* Lua Language Server
+- Neovim
+- Lazy.nvim
+- Tree-sitter
+- Lua Language Server
 
 ## Languages
 
-* Go
-* Node.js
-* Python
-* Rust
+- Go
+- Node.js
+- Python
+- Rust
 
 ## Development
 
-* Git
-* GitHub CLI
-* Docker
-* Homebrew
+- Git
+- GitHub CLI
+- Docker
+- Homebrew
 
 ## CLI Utilities
 
-* bat
-* btop
-* eza
-* fd
-* fzf
-* lazygit
-* ripgrep
-* tmux
-* uv
-* yazi
+- bat
+- btop
+- eza
+- fd
+- fzf
+- lazygit
+- ripgrep
+- uv
+- yazi
 
 ---
 
-# Philosophy
+# Design Goals
 
-The goal of this repository is not to create the most customized setup possible, but a development environment that is:
+The environment prioritizes:
 
-* Simple
-* Reproducible
-* Maintainable
-* Fast
-* Easy to understand
+- Consistency
+- Speed
+- Reproducibility
+- Automation
+- Maintainability
+- Minimalism
 
-Configuration is kept intentionally small and organized so it can evolve without unnecessary complexity.
+Every configuration should make daily development slightly more efficient.
 
 ---
 
 # Roadmap
 
-* [ ] Automatic configuration symlinking
-* [ ] Ghostty configuration
-* [ ] Starship configuration
-* [ ] macOS defaults script
-* [ ] Linux support
+
+- Automatic symlink management
+- Ghostty configuration
+- Starship configuration
+- macOS defaults automation
+- Linux support
+- Environment validation
+- Bootstrap diagnostics
+
+---
+
+# Guiding Principles
+
+- Configuration as infrastructure
+- Automation over repetition
+- Consistency across machines
+- Small, composable configuration
+- Long-term maintainability
 
 ---
 
 # License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
-Edvard Pasz
+Licensed under the MIT License.
