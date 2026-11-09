@@ -7,10 +7,15 @@ alias dashboard="$HOME/dashboard.sh"
 alias venv="source .venv/bin/activate.fish"
 
 # Go tools
-set -gx PATH $PATH $HOME/go/bin
+fish_add_path -g $HOME/go/bin
 
 # pipx
-set -gx PATH $PATH $HOME/.local/bin
+fish_add_path -g $HOME/.local/bin
 
-# Tractor CLI (remove later if you don't need it)
-set -gx PATH $PATH $HOME/dev/tractor/bin
+
+# pnpm
+set -gx PNPM_HOME "/Users/edvardpasz/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
